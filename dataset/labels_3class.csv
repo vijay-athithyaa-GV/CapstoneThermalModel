@@ -1,0 +1,86 @@
+filepath,label,criticality,source_dir
+IMG-20251105-WA0109.jpg,Low Load,1.0,Low load
+IMG-20251105-WA0110.jpg,Low Load,1.0,Low load
+IMG-20251105-WA0111.jpg,Low Load,1.0,Low load
+IMG-20251105-WA0112.jpg,Low Load,1.0,Low load
+IMG-20251105-WA0113.jpg,Low Load,1.0,Low load
+IMG-20251105-WA0114.jpg,Low Load,1.0,Low load
+IMG-20251105-WA0115.jpg,Low Load,1.0,Low load
+IMG-20251105-WA0116.jpg,Low Load,1.0,Low load
+IMG-20251105-WA0117.jpg,Low Load,1.0,Low load
+IMG-20251105-WA0118.jpg,Low Load,1.0,Low load
+IMG-20251105-WA0119.jpg,Low Load,1.0,Low load
+IMG-20251105-WA0120.jpg,Low Load,1.0,Low load
+IMG-20251105-WA0121.jpg,Low Load,1.0,Low load
+IMG-20251105-WA0122.jpg,Low Load,1.0,Low load
+IMG-20251105-WA0123.jpg,Low Load,1.0,Low load
+IMG-20251105-WA0124.jpg,Low Load,1.0,Low load
+IMG-20251105-WA0125.jpg,Low Load,1.0,Low load
+IMG-20251105-WA0126.jpg,Low Load,1.0,Low load
+IMG-20251105-WA0127.jpg,Low Load,1.0,Low load
+IMG-20251105-WA0128.jpg,Low Load,1.0,Low load
+IMG-20251105-WA0129.jpg,Low Load,1.0,Low load
+IMG-20251105-WA0130.jpg,Low Load,1.0,Low load
+IMG-20251105-WA0131.jpg,Low Load,1.0,Low load
+IMG-20251105-WA0007.jpg,High Load,1.0,HighLoad
+IMG-20251105-WA0051.jpg,High Load,1.0,HighLoad
+IMG-20251105-WA0055.jpg,High Load,1.0,HighLoad
+IMG-20251105-WA0056.jpg,High Load,1.0,HighLoad
+IMG-20251105-WA0057.jpg,High Load,1.0,HighLoad
+IMG-20251105-WA0058.jpg,High Load,1.0,HighLoad
+IMG-20251105-WA0059.jpg,High Load,1.0,HighLoad
+IMG-20251105-WA0063.jpg,High Load,1.0,HighLoad
+IMG-20251105-WA0068.jpg,High Load,1.0,HighLoad
+IMG-20251105-WA0069.jpg,High Load,1.0,HighLoad
+IMG-20251105-WA0073.jpg,High Load,1.0,HighLoad
+IMG-20251105-WA0074.jpg,High Load,1.0,HighLoad
+IMG-20251105-WA0075.jpg,High Load,1.0,HighLoad
+IMG-20251105-WA0076.jpg,High Load,1.0,HighLoad
+IMG-20251105-WA0078.jpg,High Load,1.0,HighLoad
+IMG-20251105-WA0081.jpg,High Load,1.0,HighLoad
+IMG-20251105-WA0083.jpg,High Load,1.0,HighLoad
+IMG-20251105-WA0084.jpg,High Load,1.0,HighLoad
+IMG-20251105-WA0085.jpg,High Load,1.0,HighLoad
+IMG-20251105-WA0086.jpg,High Load,1.0,HighLoad
+IMG-20251105-WA0087.jpg,High Load,1.0,HighLoad
+IMG-20251105-WA0088.jpg,High Load,1.0,HighLoad
+IMG-20251105-WA0089.jpg,High Load,1.0,HighLoad
+IMG-20251105-WA0090.jpg,High Load,1.0,HighLoad
+IMG-20251105-WA0091.jpg,High Load,1.0,HighLoad
+IMG-20251105-WA0092.jpg,High Load,1.0,HighLoad
+IMG-20251105-WA0093.jpg,High Load,1.0,HighLoad
+IMG-20251105-WA0094.jpg,High Load,1.0,HighLoad
+IMG-20251105-WA0095.jpg,High Load,1.0,HighLoad
+IMG-20251105-WA0096.jpg,High Load,1.0,HighLoad
+IMG-20251105-WA0097.jpg,High Load,1.0,HighLoad
+IMG-20251105-WA0098.jpg,High Load,1.0,HighLoad
+flir_thermal_0004.png,Medium Load,0.5610089332519607,
+flir_thermal_0006.png,Medium Load,0.4924563897946135,
+flir_thermal_0009.png,Medium Load,0.4519507945974169,
+flir_thermal_0010.png,Medium Load,0.5493169057015738,
+flir_thermal_0013.png,Medium Load,0.448079215384314,
+flir_thermal_0016.png,Medium Load,0.4786740393860745,
+flir_thermal_0020.png,Medium Load,0.630361865689486,
+flir_thermal_0023.png,Medium Load,0.6269195857790757,
+flir_thermal_0025.png,Medium Load,0.5573432345142444,
+flir_thermal_0026.png,Medium Load,0.597366721698862,
+flir_thermal_0033.png,Medium Load,0.4557141827327703,
+flir_thermal_0034.png,Medium Load,0.6285115811099219,
+flir_thermal_0035.png,Medium Load,0.4349172469748636,
+flir_thermal_0036.png,Medium Load,0.5566207031538987,
+flir_thermal_0038.png,Medium Load,0.5307767509441615,
+flir_thermal_0041.png,Medium Load,0.438289215882915,
+flir_thermal_0047.png,Medium Load,0.5997039764313981,
+flir_thermal_0049.png,Medium Load,0.5155869136961954,
+flir_thermal_0056.png,Medium Load,0.5710065977892063,
+flir_thermal_0063.png,Medium Load,0.6381128488020393,
+flir_thermal_0064.png,Medium Load,0.5109774349789459,
+flir_thermal_0066.png,Medium Load,0.61613229993343,
+flir_thermal_0067.png,Medium Load,0.6381377007015556,
+flir_thermal_0069.png,Medium Load,0.5066751047435561,
+flir_thermal_0072.png,Medium Load,0.4372582763059012,
+flir_thermal_0076.png,Medium Load,0.4358898832104427,
+flir_thermal_0079.png,Medium Load,0.4331939203698516,
+flir_thermal_0080.png,Medium Load,0.5181717608154653,
+flir_thermal_0081.png,Medium Load,0.4370956693753917,
+flir_thermal_0085.png,Medium Load,0.5125806002193996,
