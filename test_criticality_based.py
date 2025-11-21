@@ -46,7 +46,7 @@ def test_criticality_based(image_path: str, model_dir: str = "artifacts_critical
         print(f"ERROR: Could not read image. Supported formats: PNG, JPG, JPEG")
         return None
     
-    print(f"  ✓ Image loaded: {img.shape[1]}×{img.shape[0]} pixels, {img.shape[2]} channels")
+    print(f"  [OK] Image loaded: {img.shape[1]}x{img.shape[0]} pixels, {img.shape[2]} channels")
     
     # Convert BGR to RGB
     img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
@@ -56,7 +56,7 @@ def test_criticality_based(image_path: str, model_dir: str = "artifacts_critical
     should_proceed, validation_msg = validate_before_processing(image_path, img_rgb, strict=strict)
     
     if not should_proceed:
-        print(f"  ✗ {validation_msg}")
+        print(f"  [ERROR] {validation_msg}")
         print("\n" + "="*70)
         print("REJECTED: Image does not appear to be a thermal image")
         print("="*70)
@@ -68,10 +68,10 @@ def test_criticality_based(image_path: str, model_dir: str = "artifacts_critical
     print("\n[3] Loading trained model...")
     try:
         model = CriticalityBasedModel.load(model_dir)
-        print("  ✓ Model loaded successfully")
-        print(f"  Thresholds: Low<{model.low_threshold}, Med<{model.medium_threshold}, High≥{model.medium_threshold}")
+        print("  [OK] Model loaded successfully")
+        print(f"  Thresholds: Low<{model.low_threshold}, Med<{model.medium_threshold}, High>={model.medium_threshold}")
     except Exception as e:
-        print(f"  ✗ Error loading model: {e}")
+        print(f"  [ERROR] Error loading model: {e}")
         return None
     
     # Extract features
@@ -83,18 +83,18 @@ def test_criticality_based(image_path: str, model_dir: str = "artifacts_critical
             min_temp_c=20.0,
             max_temp_c=120.0
         )
-        print(f"  ✓ Features extracted: {feats.shape}")
+        print(f"  [OK] Features extracted: {feats.shape}")
         
         # Show temperature statistics
         temp_matrix = debug['temp_c']
         print(f"\n  Temperature Statistics:")
-        print(f"    Min: {temp_matrix.min():.1f}°C")
-        print(f"    Max: {temp_matrix.max():.1f}°C")
-        print(f"    Mean: {temp_matrix.mean():.1f}°C")
-        print(f"    Std: {temp_matrix.std():.1f}°C")
+        print(f"    Min: {temp_matrix.min():.1f} degC")
+        print(f"    Max: {temp_matrix.max():.1f} degC")
+        print(f"    Mean: {temp_matrix.mean():.1f} degC")
+        print(f"    Std: {temp_matrix.std():.1f} degC")
         
     except Exception as e:
-        print(f"  ✗ Error extracting features: {e}")
+        print(f"  [ERROR] Error extracting features: {e}")
         import traceback
         traceback.print_exc()
         return None
@@ -108,12 +108,12 @@ def test_criticality_based(image_path: str, model_dir: str = "artifacts_critical
         # Derive classification from criticality
         load_category = model.criticality_to_class(criticality)
         
-        print("  ✓ Prediction complete")
+        print("  [OK] Prediction complete")
         print(f"\n  Criticality Score: {criticality:.4f}")
         print(f"  Derived Category: {load_category}")
         
     except Exception as e:
-        print(f"  ✗ Error during inference: {e}")
+        print(f"  [ERROR] Error during inference: {e}")
         import traceback
         traceback.print_exc()
         return None
@@ -128,14 +128,14 @@ def test_criticality_based(image_path: str, model_dir: str = "artifacts_critical
     # Interpretation
     print(f"\n  Interpretation:")
     if criticality < model.low_threshold:
-        risk_level = "🟢 LOW RISK - Normal operation (Not Critical)"
-        print(f"    Criticality range: 0.0 - {model.low_threshold} → Low Load")
+        risk_level = "[GREEN] LOW RISK - Normal operation (Not Critical)"
+        print(f"    Criticality range: 0.0 - {model.low_threshold} -> Low Load")
     elif criticality < model.medium_threshold:
-        risk_level = "🟡 MEDIUM RISK - Monitor closely"
-        print(f"    Criticality range: {model.low_threshold} - {model.medium_threshold} → Medium Load")
+        risk_level = "[YELLOW] MEDIUM RISK - Monitor closely"
+        print(f"    Criticality range: {model.low_threshold} - {model.medium_threshold} -> Medium Load")
     else:
-        risk_level = "🔴 CRITICAL - Immediate attention required (Very Critical)"
-        print(f"    Criticality range: {model.medium_threshold} - 1.0 → High Load")
+        risk_level = "[RED] CRITICAL - Immediate attention required (Very Critical)"
+        print(f"    Criticality range: {model.medium_threshold} - 1.0 -> High Load")
     
     print(f"    {risk_level}")
     
@@ -152,7 +152,7 @@ def test_criticality_based(image_path: str, model_dir: str = "artifacts_critical
     print("How it works:")
     print(f"  1. Model predicts criticality score: {criticality:.4f}")
     print(f"  2. Classification derived from criticality:")
-    print(f"     - {criticality:.4f} → {load_category}")
+    print(f"     - {criticality:.4f} -> {load_category}")
     print("="*70)
     
     return result
